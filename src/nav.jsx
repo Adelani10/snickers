@@ -17,7 +17,7 @@ export default function Nav () {
 
 
     return (
-        <nav className="flex justify-between md:border-b h-20 relative box-border">
+        <header className="flex justify-between md:border-b h-20 relative box-border">
             <div className="space-x-7 flex items-center">
                 <div className="flex items-end space-x-3">
 
@@ -80,6 +80,6 @@ export default function Nav () {
 
             </section>}
 
-        </nav>
+        </header>
     )
 }
