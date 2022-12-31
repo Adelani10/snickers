@@ -10,7 +10,7 @@ function App() {
 
   return (
     <main className=' App container relative mx-auto pb-4 px-3 box-border'>
-      {popUp && <div className='bg-black opacity-90 w-full h-full absolute z-20 '></div>}
+      {popUp && <div className='bg-black opacity-90 w-full h-full hidden md:inline-block absolute z-20 '></div>}
       <Nav/>
       <Sidebar/>
       <Home/>

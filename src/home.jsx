@@ -22,7 +22,7 @@ export default function Home () {
     return (
         <section className="relative flex flex-col items-center md:grid md:grid-cols-2 space-y-6 md:space-y-0 md:py-6 md:px-10">
 
-            {popUp && <main className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-50 space-y-2">
+            {popUp && <main className="absolute top-1/2 left-1/2 -translate-x-1/2 hidden -translate-y-1/2 md:flex flex-col items-center z-50 space-y-2">
                 <button className="self-end">
                     <img src="/icon-close.svg" onClick={hidePopUp} alt=""  />
                 </button>
