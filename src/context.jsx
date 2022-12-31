@@ -12,7 +12,12 @@ function Context (props) {
     const [isSideBarShown, setIsSideBarShown] = useState(false)
     const [count, setCount] = useState(1)
     const [cartItem, setCartItem] = useState([])
+    const [checkout, setCheckout] = useState('Checkout')
+
+
+
     const presentProduct = allSnickers[number]
+
 
     function showPopUp () {
         setPopUp(true)
@@ -72,6 +77,19 @@ function Context (props) {
         setIsSideBarShown(!isSideBarShown)
     }
 
+    function handleCheckout () {
+        setCheckout('Checking Out...')
+
+        setTimeout(() => {
+            setCount(1)
+            setNumber(0)
+            setCartItem([])
+            setCheckout('Checkout')
+        }, 6000)
+
+        setTimeout(() => setCheckout('Completed!'), 3000)
+    }
+
     return (
         <AddContext.Provider value=
             {{
@@ -92,7 +110,9 @@ function Context (props) {
                 toggleShowCart,
                 emptyCart,
                 isSideBarShown,
-                toggleSideBar
+                toggleSideBar,
+                checkout,
+                handleCheckout
             }}
         >
                 {props.children}

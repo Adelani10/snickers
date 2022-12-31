@@ -12,7 +12,9 @@ export default function Nav () {
         count,
         emptyCart,
         toggleShowCart,
-        toggleSideBar
+        toggleSideBar,
+        checkout,
+        handleCheckout
     } = useContext(AddContext)
 
 
@@ -64,14 +66,14 @@ export default function Nav () {
                         </button>
                     </div>
                     <article className="p-3">
-                        <button className="bg-orange-500 py-1 rounded-md text-white w-full">
-                            Checkout
+                        <button onClick={handleCheckout} className="bg-orange-500 py-1 rounded-md text-white w-full font-bold">
+                            {checkout}
                         </button>
                     </article>
                 </div>
                 :
                 <div className="flex justify-center items-center h-24">
-                    <h1 className="md:text-sm text-[12px] tracking-tighter md:tracking-normal">
+                    <h1 className="text-sm tracking-tighter md:tracking-normal">
                         Your cart is empty.
                     </h1>
                 </div>}
